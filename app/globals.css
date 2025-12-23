@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* LIGHT MODE - Default */
+  --background: #f9fafb;       
+  --background-section: #ffffff;
+  --background-card: #ffffff;
+
+  --foreground: #0f1115;       
+  --foreground-secondary: #4b5563;
+  --foreground-muted: #6b7280;
+
+  --border-subtle: #e5e7eb;
+
+  --accent: #c59dff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* DARK MODE - Controlled by next-themes class */
+.dark {
+  --background: #0f1115;       
+  --background-section: #141821;
+  --background-card: #181c27;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #f5f7fa;
+  --foreground-secondary: #aeb4c2;
+  --foreground-muted: #8b90a0;
+
+  --border-subtle: #242938;
+
+  --accent: #c59dff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Font Display Class */
+.font-display {
+  font-family: var(--font-yellowtail), cursive !important;
+}
+
+/* Accent Color */
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Background Colors */
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-background-section {
+  background-color: var(--background-section);
+}
+
+.bg-background-card {
+  background-color: var(--background-card);
+}
+
+/* Text Colors */
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-foreground-secondary {
+  color: var(--foreground-secondary);
+}
+
+.text-foreground-muted {
+  color: var(--foreground-muted);
+}
+
+/* Border */
+.border-border-subtle {
+  border-color: var(--border-subtle);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
