@@ -24,39 +24,39 @@ const STACK = [
   {
     title: "Frontend",
     tools: [
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "HTML", icon: SiHtml5, color: "#E34F26" },
+      { name: "CSS", icon: SiCss3, color: "#1572B6" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
     ],
   },
   {
     title: "Backend / CMS",
     tools: [
-      { name: "PHP", icon: SiPhp },
-      { name: "WordPress", icon: SiWordpress },
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express", icon: SiExpress },
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
+      { name: "WordPress", icon: SiWordpress, color: "#21759B" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "Express", icon: SiExpress, color: "#000000" },
     ],
   },
   {
     title: "Mobile / Cross-Platform",
     tools: [
-      { name: "Flutter", icon: SiFlutter },
-      { name: "Dart", icon: SiDart },
-      { name: "React Native", icon: SiReact },
+      { name: "Flutter", icon: SiFlutter, color: "#02569B" },
+      { name: "Dart", icon: SiDart, color: "#0175C2" },
+      { name: "React Native", icon: SiReact, color: "#61DAFB" },
     ],
   },
   {
     title: "Database / Tools",
     tools: [
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "GitHub", icon: SiGithub },
-      { name: "Firebase", icon: SiFirebase },
-      { name: "Figma", icon: SiFigma },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "GitHub", icon: SiGithub, color: "#181717" },
+      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
     ],
   },
 ];
@@ -90,16 +90,20 @@ export default function TechStack() {
                 {group.title}
               </h3>
 
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                 {group.tools.map((tool, j) => (
                   <div
                     key={j}
                     className="flex flex-col items-center gap-2 text-center
-                    hover:scale-105 transition-transform"
+                    hover:scale-110 hover:-translate-y-1 transition-all duration-300
+                    cursor-pointer group"
                     title={tool.name}
                   >
-                    <tool.icon className="w-8 h-8 text-accent" />
-                    <span className="text-sm text-foreground-muted">
+                    <tool.icon 
+                      className="w-8 h-8 group-hover:drop-shadow-lg transition-all" 
+                      style={{ color: tool.color }}
+                    />
+                    <span className="text-sm text-foreground-muted group-hover:text-foreground transition-colors">
                       {tool.name}
                     </span>
                   </div>

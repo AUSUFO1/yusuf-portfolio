@@ -98,7 +98,7 @@ export default function Hero() {
         <div className="space-y-8 text-center md:text-left flex flex-col justify-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Hey, I am Yusuf
+              Hi, I am Yusuf
             </h1>
 
             {/* FIXED WIDTH TYPING - Updated with min-width */}

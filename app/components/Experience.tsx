@@ -5,29 +5,32 @@ import Image from "next/image";
 const EXPERIENCES = [
   {
     company: "National Gallery of Art (NGA)",
-    role: "Information Service",
+    role: "Web Developer / Front-End Support Engineer",
     duration: "JAN 2025 - DEC 2025",
-    location: "Head of Service, Abuja",
+    location: "Abuja",
     logo: "/ngalogo.png",
     responsibilities: [
-      "Supported web and digital content platforms used by the gallery",
-      "Assisted with website updates, content management, and branding consistency",
-      "Collaborated on graphics and web-related tasks",
-      "Ensured accessibility and performance across devices",
+      "Supported and enhanced web and digital platforms used by the national cultural institution, contributing to public-facing and internal web solutions.",
+      "Assisted in developing and maintaining the NGA Virtual Gallery, ensuring responsive layouts, consistent branding, and smooth user interactions across devices.",
+      "Implemented content updates and UI improvements in collaboration with design and communications teams to maintain accuracy and visual consistency.",
+      "Ensured cross-browser compatibility, accessibility, and performance optimization for all supported web pages.",
+      "Collaborated with team members on web-related tasks, debugging frontend issues and supporting deployment and content workflows.",
     ],
   },
   {
-    company: "iWeb",
-    role: "WordPress Website Manager",
+    company: "IWeb.ng",
+    role: "Web Developer / WordPress Website Manager",
     duration: "NOV 2020 - DEC 2023",
     location: "Gwagwalada, Abuja",
     logo: "/iweb.ng.png",
     responsibilities: [
-      "Managed and maintained multiple WordPress websites",
-      "Handled updates, security, backups, and performance optimization",
-      "Published and structured web content",
-      "Collaborated with writers and developers",
-      "Provided technical support and site troubleshooting",
+      "Built, optimized, and maintained 10+ production websites using WordPress, HTML, CSS, and JavaScript, ensuring 99.9% uptime and reliable performance across devices.",
+      "Implemented front-end optimizations (asset optimization, caching strategies, responsive layouts) that improved page load speed and overall user experience.",
+      "Collaborated with stakeholders to execute SEO-focused content updates, contributing to a 20% increase in organic traffic across managed platforms.",
+      "Customized WordPress themes and integrated plugins to deliver scalable, business-aligned features while maintaining clean and maintainable codebases.",
+      "Worked closely with site administrators and content teams to enforce security best practices, performing regular updates and audits that reduced security risks by ~30%.",
+      "Provided technical support and guidance to 13+ content contributors, resolving frontend and CMS-related issues and improving publishing efficiency.",
+      "Managed hosting environments and performed database optimization (MySQL) to ensure stable and efficient site operations.",
     ],
   },
 ];
@@ -74,15 +77,13 @@ export default function Experience() {
                   <h3 className="text-xl md:text-2xl font-bold text-foreground">
                     {exp.role}
                   </h3>
+                  <p className="text-lg font-semibold text-accent mt-1">
+                    {exp.company}
+                  </p>
                   <p className="text-foreground-muted text-sm mt-1">
                     {exp.duration} | {exp.location}
                   </p>
                 </div>
-
-                {/* Company Name */}
-                <p className="text-lg font-semibold text-foreground">
-                  {exp.company}
-                </p>
 
                 {/* Responsibilities */}
                 <div className="space-y-2">

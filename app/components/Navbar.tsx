@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Download } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -64,17 +64,21 @@ export default function Navbar() {
 
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-3 md:gap-6 whitespace-nowrap">
-          <Link href="#contact">
-            <button
-              className="px-4 py-2 text-xs md:text-sm font-medium 
-              text-foreground hover:text-accent 
-              transition-colors duration-200"
-            >
-              Get Resume
-            </button>
-          </Link>
+          {/* RESUME DOWNLOAD BUTTON */}
+          <a
+            href="/ABUBAKAR-YUSUF-CV.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 
+            text-xs md:text-sm font-medium 
+            text-foreground hover:text-accent 
+            transition-all duration-200 
+            hover:scale-105 group"
+          >
+            <span>Resume</span>
+            <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+          </a>
 
-          {/* THEME TOGGLE — icon now uses ACCENT COLOR */}
+          {/* THEME TOGGLE */}
           <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
             className="p-2 rounded-full 
