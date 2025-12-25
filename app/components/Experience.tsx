@@ -10,11 +10,9 @@ const EXPERIENCES = [
     location: "Abuja",
     logo: "/ngalogo.png",
     responsibilities: [
-      "Supported and enhanced web and digital platforms used by the national cultural institution, contributing to public-facing and internal web solutions.",
-      "Assisted in developing and maintaining the NGA Virtual Gallery, ensuring responsive layouts, consistent branding, and smooth user interactions across devices.",
-      "Implemented content updates and UI improvements in collaboration with design and communications teams to maintain accuracy and visual consistency.",
-      "Ensured cross-browser compatibility, accessibility, and performance optimization for all supported web pages.",
-      "Collaborated with team members on web-related tasks, debugging frontend issues and supporting deployment and content workflows.",
+      "Developed and maintained the NGA Virtual Gallery, ensuring responsive layouts, consistent branding, and smooth user interactions across all devices.",
+      "Ensured cross-browser compatibility, accessibility standards (WCAG), and performance optimization for all web platforms.",
+      "Collaborated with design and communications teams on content updates, UI improvements, and deployment workflows.",
     ],
   },
   {
@@ -24,13 +22,9 @@ const EXPERIENCES = [
     location: "Gwagwalada, Abuja",
     logo: "/iweb.ng.png",
     responsibilities: [
-      "Built, optimized, and maintained 10+ production websites using WordPress, HTML, CSS, and JavaScript, ensuring 99.9% uptime and reliable performance across devices.",
-      "Implemented front-end optimizations (asset optimization, caching strategies, responsive layouts) that improved page load speed and overall user experience.",
-      "Collaborated with stakeholders to execute SEO-focused content updates, contributing to a 20% increase in organic traffic across managed platforms.",
-      "Customized WordPress themes and integrated plugins to deliver scalable, business-aligned features while maintaining clean and maintainable codebases.",
-      "Worked closely with site administrators and content teams to enforce security best practices, performing regular updates and audits that reduced security risks by ~30%.",
-      "Provided technical support and guidance to 13+ content contributors, resolving frontend and CMS-related issues and improving publishing efficiency.",
-      "Managed hosting environments and performed database optimization (MySQL) to ensure stable and efficient site operations.",
+      "Built, optimized, and maintained 10+ production websites using WordPress, HTML, CSS, and JavaScript, ensuring 99.9% uptime across devices.",
+      "Implemented front-end optimizations and SEO strategies that improved page load speeds and contributed to a 20% increase in organic traffic.",
+      "Enforced security best practices through regular updates and audits, reducing security risks by ~30% while supporting 13+ content contributors.",
     ],
   },
 ];

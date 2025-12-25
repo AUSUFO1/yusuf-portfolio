@@ -74,7 +74,7 @@ export default function Navbar() {
             transition-all duration-200 
             hover:scale-105 group"
           >
-            <span>Resume</span>
+            <span>My Resume</span>
             <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
           </a>
 
@@ -89,9 +89,9 @@ export default function Navbar() {
             aria-label="Toggle Dark Mode"
           >
             {currentTheme === "dark" ? (
-              <Sun className="w-5 h-5 text-accent" />
+              <Sun className="w-4 h-4 text-accent" />
             ) : (
-              <Moon className="w-5 h-5 text-accent" />
+              <Moon className="w-4 h-4 text-accent" />
             )}
           </button>
         </div>

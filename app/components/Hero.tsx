@@ -75,24 +75,28 @@ export default function Hero() {
   ];
 
   const socialLinks = [
-    { Icon: SiGmail, color: "#EA4335", label: "Email" },
-    { Icon: SiGithub, color: "#181717", label: "GitHub" },
-    { Icon: SiLinkedin, color: "#0A66C2", label: "LinkedIn" },
+    {
+      Icon: SiGmail,
+      color: "#EA4335",
+      label: "Email",
+      href: "mailto:oabubakar2019@gmail.com",
+    },
+    {
+      Icon: SiGithub,
+      color: "#181717",
+      label: "GitHub",
+      href: "https://github.com/AUSUFO1/",
+    },
+    {
+      Icon: SiLinkedin,
+      color: "#0A66C2",
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/abubakar-yusuf-0a6453239",
+    },
   ];
 
   return (
-    <section
-      className="
-        px-6
-        pt-28            
-        pb-8
-        md:pt-32
-        lg:min-h-screen
-        lg:flex
-        lg:items-center
-        lg:justify-center
-      "
-    >
+    <section className="px-6 pt-28 pb-8 md:pt-32 lg:min-h-screen lg:flex lg:items-center lg:justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* LEFT */}
         <div className="space-y-8 text-center md:text-left flex flex-col justify-center">
@@ -101,7 +105,7 @@ export default function Hero() {
               Hi, I am Yusuf
             </h1>
 
-            {/* FIXED WIDTH TYPING - Updated with min-width */}
+            {/* FIXED WIDTH TYPING */}
             <div className="h-[1.4em] min-w-70 md:min-w-100 lg:min-w-125 mx-auto md:mx-0">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent">
                 {displayText}
@@ -118,12 +122,19 @@ export default function Hero() {
 
           <div className="flex gap-6 justify-center md:justify-start">
             {socialLinks.map((social, i) => (
-              <social.Icon
+              <a
                 key={i}
-                className="w-10 h-10 lg:h-15 lg:w-15 cursor-pointer hover:scale-110 transition-transform"
-                style={{ color: social.color }}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
-              />
+                className="hover:scale-110 transition-transform"
+              >
+                <social.Icon
+                  className="w-10 h-10 lg:h-15 lg:w-15"
+                  style={{ color: social.color }}
+                />
+              </a>
             ))}
           </div>
         </div>
@@ -132,7 +143,7 @@ export default function Hero() {
         <div className="flex items-center justify-center">
           <div className="relative w-55 h-55 sm:w-70 sm:h-70 md:w-90 md:h-90 lg:w-125 lg:h-125">
             <div className="absolute inset-0 flex items-center justify-center z-10">
-              <h3 
+              <h3
                 className="text-2xl sm:text-3xl md:text-4xl font-extrabold"
                 style={{
                   background: "linear-gradient(to bottom, #ffffff, #000000)",
@@ -161,7 +172,10 @@ export default function Hero() {
                   >
                     <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-background-card border flex items-center justify-center shadow-lg">
                       <div className="animate-[spin_30s_linear_infinite_reverse]">
-                        <tech.Icon className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" style={{ color: tech.color }} />
+                        <tech.Icon
+                          className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
+                          style={{ color: tech.color }}
+                        />
                       </div>
                     </div>
                   </div>
