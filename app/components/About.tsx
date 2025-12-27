@@ -2,8 +2,8 @@
 
 export default function About() {
   return (
-    <section className="px-6 mt--5 py-8 md:py-10">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <section className="px-6 mt-5 py-4 md:py-5 md:px-12 lg:px-16">
+      <div className="space-y-8">
 
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -19,7 +19,7 @@ export default function About() {
         </div>
 
         {/* ABOUT CONTENT CARD */}
-        <div className="max-w-4xl mx-auto">
+        <div>
           <div className="rounded-2xl border bg-background-card/60 backdrop-blur-md p-8 md:p-10 shadow-sm">
             <p className="text-lg leading-relaxed text-foreground-muted">
               I am a frontend-focused web developer with hands-on experience

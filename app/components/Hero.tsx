@@ -21,7 +21,8 @@ export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [radius, setRadius] = useState(95);
+  
+  const [radius, setRadius] = useState(120);
 
   useEffect(() => {
     const current = TITLES[titleIndex];
@@ -56,6 +57,7 @@ export default function Hero() {
       else setRadius(95);
     };
 
+    // Update immediately on mount
     updateRadius();
     window.addEventListener("resize", updateRadius);
     return () => window.removeEventListener("resize", updateRadius);
@@ -105,9 +107,17 @@ export default function Hero() {
               Hi, I am Yusuf
             </h1>
 
-            {/* FIXED WIDTH TYPING */}
-            <div className="h-[1.4em] min-w-70 md:min-w-100 lg:min-w-125 mx-auto md:mx-0">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent">
+            <div className="relative mt-2">
+              {/* Invisible text to reserve space */}
+              <h2 
+                className="text-2xl md:text-4xl lg:text-5xl font-bold text-transparent select-none pointer-events-none"
+                aria-hidden="true"
+              >
+                Frontend Engineer
+              </h2>
+              
+              {/* Actual typing animation */}
+              <h2 className="absolute top-0 left-0 right-0 text-2xl md:text-4xl lg:text-5xl font-bold text-accent text-center md:text-left">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </h2>
@@ -144,7 +154,7 @@ export default function Hero() {
           <div className="relative w-55 h-55 sm:w-70 sm:h-70 md:w-90 md:h-90 lg:w-125 lg:h-125">
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <h3
-                className="text-2xl sm:text-3xl md:text-4xl font-extrabold"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
                 style={{
                   background: "linear-gradient(to bottom, #ffffff, #000000)",
                   WebkitBackgroundClip: "text",
@@ -156,14 +166,16 @@ export default function Hero() {
               </h3>
             </div>
 
-            <div className="absolute inset-0 animate-[spin_30s_linear_infinite]">
+            <div 
+              className="absolute inset-0 animate-[spin_30s_linear_infinite] transition-transform duration-300"
+            >
               {outerTech.map((tech, i) => {
                 const angle = (i * 360) / outerTech.length;
 
                 return (
                   <div
                     key={i}
-                    className="absolute"
+                    className="absolute transition-transform duration-300"
                     style={{
                       top: "50%",
                       left: "50%",

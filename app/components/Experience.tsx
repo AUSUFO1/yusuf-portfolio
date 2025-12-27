@@ -31,11 +31,11 @@ const EXPERIENCES = [
 
 export default function Experience() {
   return (
-    <section className="px-6 py-8 md:py-10">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <section className="px-6 py-8 md:py-10 md:px-12 lg:px-16">
+      <div className="space-y-8">
         
         {/* SECTION HEADER */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
+        <div className="max-w-3xl mx-auto text-center space-y-3">
           <span className="text-sm uppercase tracking-widest text-foreground-muted">
             Career Path
           </span>
@@ -48,7 +48,7 @@ export default function Experience() {
         </div>
 
         {/* EXPERIENCE CONTENT */}
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="space-y-12">
           {EXPERIENCES.map((exp, index) => (
             <div key={index} className="flex gap-6">
               {/* Company Logo */}
@@ -68,7 +68,7 @@ export default function Experience() {
               <div className="flex-1 space-y-3">
                 {/* Header */}
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                  <h3 className="text-lg md:text-2xl font-bold text-foreground">
                     {exp.role}
                   </h3>
                   <p className="text-lg font-semibold text-accent mt-1">

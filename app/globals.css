@@ -12,7 +12,7 @@
 
   --border-subtle: #e5e7eb;
 
-  --accent: #c59dff;
+  --accent:  #8b5cf6;
 }
 
 /* DARK MODE - Controlled by next-themes class */
@@ -27,7 +27,7 @@
 
   --border-subtle: #242938;
 
-  --accent: #c59dff;
+  --accent:  #8b5cf6;
 }
 
 body {
