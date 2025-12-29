@@ -22,7 +22,7 @@ import {
 
 const STACK = [
   {
-    title: "Frontend",
+    title: "Frontend Engineering",
     tools: [
       { name: "HTML", icon: SiHtml5, color: "#E34F26" },
       { name: "CSS", icon: SiCss3, color: "#1572B6" },
@@ -34,26 +34,26 @@ const STACK = [
     ],
   },
   {
-    title: "Backend / CMS",
+    title: "Backend & CMS",
     tools: [
-      { name: "PHP", icon: SiPhp, color: "#777BB4" },
-      { name: "WordPress", icon: SiWordpress, color: "#21759B" },
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
+      { name: "WordPress", icon: SiWordpress, color: "#21759B" },
     ],
   },
   {
-    title: "Mobile / Cross-Platform",
+    title: "Mobile (Secondary)",
     tools: [
+      { name: "React Native", icon: SiReact, color: "#61DAFB" },
       { name: "Flutter", icon: SiFlutter, color: "#02569B" },
       { name: "Dart", icon: SiDart, color: "#0175C2" },
-      { name: "React Native", icon: SiReact, color: "#61DAFB" },
     ],
   },
   {
-    title: "Database / Tools",
+    title: "Databases & Tools",
     tools: [
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "GitHub", icon: SiGithub, color: "#181717" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
       { name: "Figma", icon: SiFigma, color: "#F24E1E" },
@@ -63,8 +63,8 @@ const STACK = [
 
 export default function TechStack() {
   return (
-    <section className="px-6 pb-10">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <section className="px-6 pb-16">
+      <div className="max-w-7xl mx-auto space-y-10">
 
         {/* SECTION HEADER */}
         <div className="text-center space-y-3">
@@ -74,8 +74,8 @@ export default function TechStack() {
           <h2 className="text-4xl md:text-5xl font-bold text-accent">
             My Stack
           </h2>
-          <p className="text-lg text-foreground-muted">
-            Tools I use to design, build, and maintain scalable web solutions.
+          <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+            Frontend-focused engineer with full-stack, CMS, and system design experience.
           </p>
         </div>
 
@@ -84,30 +84,44 @@ export default function TechStack() {
           {STACK.map((group, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-accent bg-background-card/60 backdrop-blur-md p-6"
+              className="rounded-2xl border border-accent/40
+              bg-background-card/60 backdrop-blur-md p-6"
             >
               <h3 className="text-xl font-semibold mb-6 text-accent">
                 {group.title}
               </h3>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {group.tools.map((tool, j) => (
-                  <div
-                    key={j}
-                    className="flex flex-col items-center gap-2 text-center
-                    hover:scale-110 hover:-translate-y-1 transition-all duration-300
-                    cursor-pointer group"
-                    title={tool.name}
-                  >
-                    <tool.icon 
-                      className="w-8 h-8 group-hover:drop-shadow-lg transition-all" 
-                      style={{ color: tool.color }}
-                    />
-                    <span className="text-sm text-foreground-muted group-hover:text-foreground transition-colors">
-                      {tool.name}
-                    </span>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                {group.tools.map((tool, j) => {
+                  const Icon = tool.icon;
+
+                  return (
+                    <div
+                      key={j}
+                      title={tool.name}
+                      className="
+                        group flex flex-col items-center gap-2 text-center
+                        rounded-xl p-3
+                        transition-all duration-300
+                        hover:bg-accent/10
+                        hover:-translate-y-1
+                        cursor-default
+                      "
+                    >
+                      <Icon
+                        className="
+                          w-7 h-7 text-foreground-muted
+                          transition-all duration-300
+                          group-hover:drop-shadow-md
+                        "
+                        style={{ color: tool.color }}
+                      />
+                      <span className="text-sm text-foreground-muted group-hover:text-foreground transition-colors">
+                        {tool.name}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

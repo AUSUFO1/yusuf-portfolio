@@ -124,13 +124,19 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-lg md:text-xl text-foreground-muted leading-relaxed max-w-2xl mx-auto md:mx-0">
+          <p className=" text-lg md:text-xl 
+              text-foreground-muted 
+              leading-relaxed 
+              md:leading-loose
+              max-w-2xl 
+              mx-auto md:mx-0
+              text-left md:text-justify">
             A performance-oriented software engineer specializing in Frontend & Web
             development, delivering top-notch, user-focused solutions within
             agile frameworks.
           </p>
 
-          <div className="flex gap-6 justify-center md:justify-start">
+          <div className="flex gap-6">
             {socialLinks.map((social, i) => (
               <a
                 key={i}
