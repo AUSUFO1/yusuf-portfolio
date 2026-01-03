@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YusufDev | Frontend Engineer",
+  title: "Frontend Engineer",
   description:
     "Frontend Engineer & Web Developer building clean, scalable web experiences.",
 };

@@ -53,6 +53,30 @@ const featuredProjects: Project[] = [
 
 const projects: Project[] = [
   {
+    title: "SneakerX",
+    description:
+      "A modern sneaker e-commerce platform focused on clean UI, responsive design, and scalable frontend architecture. Built to showcase product listings, branding, and smooth user experience for online retail.",
+    image: "/sneakerx.png",
+    stack: [
+      <SiNextdotjs key="next" />,
+      <SiTypescript key="ts" />,
+      <SiTailwindcss key="tw" />,
+    ],
+    live: "https://sneakerx.vercel.app/",
+  },
+  {
+    title: "NGA Admin Dashboard",
+    description:
+      "An internal admin dashboard built for the National Gallery of Art (Nigeria) to manage image uploads and gallery content. Designed with usability, security, and performance in mind for non-technical staff.",
+    image: "/nga-admin-dashboard.png",
+    stack: [
+      <SiNextdotjs key="next" />,
+      <SiTypescript key="ts" />,
+      <SiTailwindcss key="tw" />,
+    ],
+        live: "https://virtualgallery.nga.gov.ng/admin/git",
+  },
+  {
     title: "NGA Virtual Gallery",
     description:
       "An immersive 3D virtual art gallery built for the National Gallery of Art, Nigeria. The platform allows visitors to explore exhibitions online with smooth interactions, responsive design, and optimized performance across devices.",
