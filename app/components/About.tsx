@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <section className="px-6 mt-5 py-4 md:py-5 md:px-12 lg:px-16">
+    <section className="px-6 mt-5 md:px-12 lg:px-16">
       <div className="space-y-8">
 
         {/* SECTION HEADER */}

@@ -12,9 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
       <TechStack />
       <Experience />
-      <Projects />
       <Footer />
 
     </>
