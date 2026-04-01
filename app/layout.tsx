@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Yellowtail, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -54,7 +53,6 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
